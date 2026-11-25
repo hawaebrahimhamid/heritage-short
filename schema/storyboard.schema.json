@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StoryboardSchema",
+  "description": "Validation schema for heritage short film storyboard definitions.",
+  "type": "object",
+  "required": [
+    "film_title",
+    "fictional_character",
+    "language",
+    "target_total_duration_s",
+    "has_ai_end_card",
+    "shots"
+  ],
+  "properties": {
+    "film_title": {
+      "type": "string"
+    },
+    "original_title_amharic": {
+      "type": "string"
+    },
+    "fictional_character": {
+      "type": "object",
+      "required": ["name", "age", "description"],
+      "properties": {
+        "name": { "type": "string" },
+        "name_amharic": { "type": "string" },
+        "age": { "type": "integer" },
+        "description": { "type": "string" },
+        "visual_anchor_prompt": { "type": "string" }
+      }
+    },
+    "language": {
+      "type": "object",
+      "required": ["primary_audio", "subtitles"],
+      "properties": {
+        "primary_audio": { "type": "string" },
+        "subtitles": { "type": "string" }
+      }
+    },
+    "target_total_duration_s": {
+      "type": "number",
+      "minimum": 60,
+      "maximum": 90
+    },
+    "has_ai_end_card": {
+      "type": "boolean"
+    },
+    "shots": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": [
+          "shot_id",
+          "scene_name",
+          "duration_s",
+          "camera",
+          "visual_prompt",
+          "negative_prompt",
+          "audio"
+        ],
+        "properties": {
+          "shot_id": { "type": "integer" },
+          "scene_name": { "type": "string" },
+          "start_time_s": { "type": "number" },
+          "duration_s": { "type": "number" },
+          "camera": {
+            "type": "object",
+            "required": ["shot_type", "movement", "lens"],
+            "properties": {
+              "shot_type": { "type": "string" },
+              "movement": { "type": "string" },
+              "lens": { "type": "string" }
+            }
+          },
+          "visual_prompt": { "type": "string" },
+          "negative_prompt": { "type": "string" },
+          "audio": {
+            "type": "object",
+            "required": ["voiceover_amharic", "voiceover_english", "foley"],
+            "properties": {
+              "speaker": { "type": "string" },
+              "voiceover_amharic": { "type": "string" },
+              "voiceover_english": { "type": "string" },
+              "foley": { "type": "string" },
+              "music_cue": { "type": "string" }
+            }
+          },
+          "is_end_card": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

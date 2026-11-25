@@ -1,0 +1,192 @@
+{
+    "film_title": "Morning Barakah & The Proverb",
+    "original_title_amharic": "የጧት በረከት እና ምሳሌው",
+    "synopsis": "A 72-second cinematic heritage vignette honoring Ethiopian morning coffee traditions and timeless generational wisdom. Fictional elder Hajja Mariam prepares the jebena buna and imparts an ancient Amharic proverb on patience.",
+    "target_total_duration_s": 72.0,
+    "aspect_ratio": "16:9",
+    "resolution": "1920x1080",
+    "framerate_fps": 24,
+    "has_ai_end_card": true,
+    "language": {
+        "primary_audio": "Amharic (አማርኛ)",
+        "subtitles": "English"
+    },
+    "fictional_character": {
+        "name": "Hajja Mariam",
+        "name_amharic": "ሐጃ ማርያም",
+        "age": 68,
+        "role": "Elder storyteller and matriarch (fictional character)",
+        "description": "A graceful Ethiopian elder with warm, creased eyes, serene demeanor, wearing a white cotton Habesha kemis with subtle green-and-gold tibeb embroidery and a fine white netela veil.",
+        "visual_anchor_prompt": "An authentic portrait of Hajja Mariam, 68-year-old Ethiopian elder woman with warm weathered face, kind dark brown eyes, wearing traditional Ethiopian white handwoven cotton dress (Habesha kemis) with fine colorful tibeb border, white netela veil draped over head and shoulders, soft golden morning light, photorealistic, 8k resolution, cinematic 35mm portrait"
+    },
+    "shots": [
+        {
+            "shot_id": 1,
+            "scene_name": "Highland Dawn & Courtyard Awakening",
+            "start_time_s": 0.0,
+            "duration_s": 9.0,
+            "camera": {
+                "shot_type": "Wide Establishing Shot",
+                "movement": "Slow cinematic jib down and forward glide",
+                "lens": "24mm anamorphic"
+            },
+            "visual_prompt": "Golden hour sunrise breaking over mist-covered Ethiopian highland village, traditional stone and clay courtyard with wild green ketema grasses spread on the ground, soft dawn light filtering through eucalyptus trees, distant mountain ridge in warm haze, cinematic 35mm film still, photorealistic, Kodak Portra 400 tones",
+            "negative_prompt": "modern buildings, skyscrapers, asphalt, cars, modern plastic objects, neon lighting, digital distortion, low quality, oversaturated",
+            "audio": {
+                "speaker": "Hajja Mariam (Narrator)",
+                "voiceover_amharic": "ፀሐይ ስትወጣ በረከቷን ይዛ ትመጣለች። የጧት አየር ሰላምን ያወርሳል።",
+                "voiceover_english": "When the sun rises, it brings its barakah. The morning air bestows peace.",
+                "foley": "Gentle mountain morning breeze, distant songbirds, rooster crow in far distance",
+                "music_cue": "Subtle, ethereal Masenqo bowed strings entering softly"
+            },
+            "is_end_card": false
+        },
+        {
+            "shot_id": 2,
+            "scene_name": "Hajja Mariam Tending the Embers",
+            "start_time_s": 9.0,
+            "duration_s": 9.0,
+            "camera": {
+                "shot_type": "Medium Shot",
+                "movement": "Gentle static eye-level push-in",
+                "lens": "50mm prime f/1.8"
+            },
+            "visual_prompt": "Hajja Mariam, 68-year-old Ethiopian elder woman in white Habesha kemis and netela, seated gracefully on a low carved wooden stool in her courtyard, blowing gently on glowing charcoal embers inside a traditional clay brazier (madad), glowing red sparks ascending, peaceful serene smile, warm golden morning light reflecting on her face, photorealistic, cinematic shallow depth of field",
+            "negative_prompt": "western clothes, synthetic fabrics, distorted fingers, deformed hands, unnatural eyes, cartoonish look, duplicate person",
+            "audio": {
+                "speaker": "Hajja Mariam",
+                "voiceover_amharic": "እሳቱ ይያያዛል። እያንዳንዱ ቀን በምስጋና ይጀምራል።",
+                "voiceover_english": "The embers catch fire. Every day begins with gratitude.",
+                "foley": "Soft breath blowing on coals, gentle crackle and pop of charcoal embers",
+                "music_cue": "Acoustic Krar pluck notes harmonizing with Masenqo"
+            },
+            "is_end_card": false
+        },
+        {
+            "shot_id": 3,
+            "scene_name": "Roasting Coffee Beans on Menkeshkesha",
+            "start_time_s": 18.0,
+            "duration_s": 9.0,
+            "camera": {
+                "shot_type": "Close-up Macro",
+                "movement": "Circular rotational pan around the roasting pan",
+                "lens": "85mm macro f/2.8"
+            },
+            "visual_prompt": "Extreme macro of fresh Ethiopian green coffee beans turning rich glossy dark brown on an iron roasting pan (menkeshkesha) over red charcoal embers, delicate wisps of fragrant white smoke rising, a small clay censer with smoking frankincense resin (itan) alongside, rich textures, glistening coffee oils, cinematic warm lighting",
+            "negative_prompt": "burnt black ash, metal kettle, modern stove, distorted pan, electronic appliances, blurred texture",
+            "audio": {
+                "speaker": "Hajja Mariam (Narrator)",
+                "voiceover_amharic": "የቡናው ፍሬዎች በእሳቱ ላይ ሲቁላሉ፣ የትውልድ መዓዛ ይነሳል።",
+                "voiceover_english": "As the coffee beans roast upon the fire, the aroma of generations awakens.",
+                "foley": "Rhythmic sliding and crackling of roasting coffee beans against iron pan, subtle hiss of incense",
+                "music_cue": "Gentle rhythmic polyrhythmic percussion on traditional kabaro drum"
+            },
+            "is_end_card": false
+        },
+        {
+            "shot_id": 4,
+            "scene_name": "Wafting the Fragrant Aroma",
+            "start_time_s": 27.0,
+            "duration_s": 9.0,
+            "camera": {
+                "shot_type": "Medium Close-up",
+                "movement": "Slow tracking dolly back",
+                "lens": "50mm prime"
+            },
+            "visual_prompt": "Hajja Mariam holding the smoking roasting pan with two hands, bringing it gently toward the camera, using her right hand in a graceful traditional gesture to wave and waft the fragrant aromatic coffee smoke toward the viewer, welcoming hospitable smile, eyes full of warmth and grandmotherly blessing, natural golden sunbeams illuminating the swirling smoke",
+            "negative_prompt": "extra fingers, mutated hand, strange facial expression, aggressive smoke, dark shadows, modern background",
+            "audio": {
+                "speaker": "Hajja Mariam",
+                "voiceover_amharic": "ኑ፣ ይህንን መዓዛ ተካፈሉ። ቡና የፍቅር እና የወዳጅነት ጥሪ ነው።",
+                "voiceover_english": "Come, share this fragrance. Coffee is a calling of love and fellowship.",
+                "foley": "Soft rustle of netela fabric, gentle whoosh of hand wafting air and smoke",
+                "music_cue": "Warm melodic Krar strumming pattern"
+            },
+            "is_end_card": false
+        },
+        {
+            "shot_id": 5,
+            "scene_name": "The Clay Jebena Infusion",
+            "start_time_s": 36.0,
+            "duration_s": 9.0,
+            "camera": {
+                "shot_type": "Medium Shot",
+                "movement": "Low-angle upward tilt",
+                "lens": "35mm prime f/2.0"
+            },
+            "visual_prompt": "Authentic black spherical clay jebena resting securely on a woven straw ring over gentle glowing embers, fragrant steam escaping its slender curved neck spout, fresh green sprigs of rue (tena'adam) lying on a woven mesob basket nearby, serene warm courtyard setting, photorealistic texture of handcrafted Ethiopian pottery",
+            "negative_prompt": "cezve, espresso pot, moka kettle, handle teapot, stainless steel pot, plastic, cracked vessel",
+            "audio": {
+                "speaker": "Hajja Mariam (Narrator)",
+                "voiceover_amharic": "ጀበናው በረጋ መንፈስ ይፈላል። ትዕግሥት ጣፋጭ ፍሬን ታፈራለች።",
+                "voiceover_english": "The jebena brews in calm tranquility. Patience yields the sweetest fruit.",
+                "foley": "Gentle boiling water simmering inside earthen clay pot, deep soft bubbling sounds",
+                "music_cue": "Deep meditative bass drone with gentle flute (Washint) trill"
+            },
+            "is_end_card": false
+        },
+        {
+            "shot_id": 6,
+            "scene_name": "The High-Arc Pouring into Sini Cups",
+            "start_time_s": 45.0,
+            "duration_s": 9.0,
+            "camera": {
+                "shot_type": "Close-up",
+                "movement": "Slow vertical tilt tracking the stream of coffee",
+                "lens": "85mm f/1.8"
+            },
+            "visual_prompt": "A continuous, graceful high-arc stream of steaming rich dark coffee pouring steadily from the spout of the black clay jebena from twenty centimeters above into six small handleless white ceramic cups (sini) decorated with golden accents, arranged neatly on a polished wooden tray, rich crema forming on top of the cups, zero spillage, flawless pouring mastery",
+            "negative_prompt": "broken stream, splashing water, mugs with handles, paper cups, unstable hands, unnatural liquid",
+            "audio": {
+                "speaker": "Hajja Mariam (Narrator)",
+                "voiceover_amharic": "ከመመረቁ በፊት፣ በበረከት ስኒዎቹ ይሞላሉ።",
+                "voiceover_english": "Before the blessing, the cups are filled with barakah.",
+                "foley": "Crisp, steady splashing of hot coffee liquid streaming into ceramic sini cups, clink of fine china",
+                "music_cue": "Rising harmonious swell of Krar and Washint melody"
+            },
+            "is_end_card": false
+        },
+        {
+            "shot_id": 7,
+            "scene_name": "The Proverb & Matriarch's Blessing",
+            "start_time_s": 54.0,
+            "duration_s": 10.0,
+            "camera": {
+                "shot_type": "Intimate Close-up Portrait",
+                "movement": "Slow gentle push-in to eye level",
+                "lens": "65mm portrait prime f/2.0"
+            },
+            "visual_prompt": "Hajja Mariam looking directly into the lens with deep emotional warmth, wisdom, and a compassionate smile, holding a steaming sini cup of buna in both hands, morning sun softly illuminating her weathered temples and white netela cloth, courtyard background falling into creamy bokeh, cinematic emotional climax, master portrait photography",
+            "negative_prompt": "emotionless face, plastic skin, unnatural teeth, flickering eyes, erratic movement, bad hands",
+            "audio": {
+                "speaker": "Hajja Mariam",
+                "voiceover_amharic": "ልጆቼ ሆይ፣ አበው ሲናገሩ፡ «ቀስ በቀስ፣ እንቁላል በእግሩ ይሄዳል» ይላሉ። በረከቱ ከሁላችን ጋር ይሁን።",
+                "voiceover_english": "My children, the elders say: 'Slowly by slowly, even an egg walks on its own feet.' May peace and barakah be with us all.",
+                "foley": "Warm breath, soft clink of cup placed onto tray, faint highland breeze",
+                "music_cue": "Climactic gentle acoustic resolution, strings and Washint resolving into serene cadence"
+            },
+            "is_end_card": false
+        },
+        {
+            "shot_id": 8,
+            "scene_name": "Title & AI Ethics Disclosure Card",
+            "start_time_s": 64.0,
+            "duration_s": 8.0,
+            "camera": {
+                "shot_type": "Graphic Overlay & Still Plate",
+                "movement": "Static plate with subtle slow ambient steam drift",
+                "lens": "Digital compositing plate"
+            },
+            "visual_prompt": "Minimalist cinematic dark slate background with delicate wisps of fading coffee steam in golden light. Elegant typography overlay: 'MORNING BARAKAH & THE PROVERB' (የጧት በረከት እና ምሳሌው). Clear AI disclosure badge: 'PRODUCED WITH GENERATIVE AI. Character Hajja Mariam is fictional. Created in celebration of Ethiopian oral storytelling traditions.'",
+            "negative_prompt": "flashy neon text, loud advertising, pop-ups, distorted letters, garbled typography",
+            "audio": {
+                "speaker": "Voiceover / Audio Chime",
+                "voiceover_amharic": "የጧት በረከት እና ምሳሌው። ይህ አጭር ፊልም የተዘጋጀው በአርቴፊሻል ኢንተለጀንስ (AI) ቴክኖሎጂ ነው። ገጸ-ባህሪዋ ሐጃ ማርያም ልብ-ወለድ ናት።",
+                "voiceover_english": "Morning Barakah & The Proverb. This short heritage film was generated using Artificial Intelligence (AI). The character 'Hajja Mariam' is fictional.",
+                "foley": "Distant echo of morning birds, soft fading breeze",
+                "music_cue": "Single sustained resonant acoustic string reverberation fading naturally into silence"
+            },
+            "is_end_card": true
+        }
+    ]
+}

@@ -1,0 +1,192 @@
+{
+  "film_title": "Morning Barakah & The Proverb",
+  "original_title_amharic": "የጠዋት በረካ እና ምሳሌው",
+  "synopsis": "A 72-second heritage short film for young Ethiopians and family members on mobile phones, capturing a calm Addis Ababa morning routine with fictional elder Hajja Mariam and an Amharic proverb on patience and trust.",
+  "target_total_duration_s": 72.0,
+  "aspect_ratio": "16:9",
+  "resolution": "1920x1080",
+  "framerate_fps": 24,
+  "has_ai_end_card": true,
+  "language": {
+    "primary_audio": "Amharic (አማርኛ)",
+    "subtitles": "English"
+  },
+  "fictional_character": {
+    "name": "Hajja Mariam",
+    "name_amharic": "ሐጅያ ማርያም",
+    "age": 68,
+    "role": "Fictional elderly Ethiopian Muslim storyteller and matriarch",
+    "description": "A calm, warm fictional elderly Ethiopian Muslim woman wearing a modest white headscarf (hijab) and a soft light shawl, seated on a low wooden stool.",
+    "visual_anchor_prompt": "A fictional 68-year-old Ethiopian Muslim woman (Hajja Mariam) with warm eyes and a calm, gentle expression, wearing a modest white headscarf (hijab) and a soft light shawl, seated on a low wooden stool in a neat, modest Addis Ababa living room, soft morning sunlight, photorealistic, 35mm cinematic frame"
+  },
+  "shots": [
+    {
+      "shot_id": 1,
+      "scene_name": "Quiet Addis Ababa Morning & Clay Jebena",
+      "start_time_s": 0.0,
+      "duration_s": 9.0,
+      "camera": {
+        "shot_type": "Establishing Wide Shot",
+        "movement": "Slow calm pan across the room",
+        "lens": "24mm"
+      },
+      "visual_prompt": "Soft morning sunlight entering a neat, modest Addis Ababa living room with a patterned prayer and sitting rug and fresh green grass (ketema) scattered on the floor, while a traditional black clay jebena warms gently over glowing charcoal, peaceful quiet morning atmosphere, photorealistic, 35mm film look",
+      "negative_prompt": "cluttered modern room, neon lights, distorted objects, low quality, blurry",
+      "audio": {
+        "speaker": "Narrator",
+        "voiceover_amharic": "በየቀኑ ጠዋት፣ ከተማዋ ጸጥ ብላ ሳለ፣ የቤታችን ቀን የሚጀምረው በሰላም እና በቡና ሽታ ነበር።",
+        "voiceover_english": "Every morning, while the city was still quiet, our day began with peace and the scent of coffee.",
+        "foley": "Quiet early morning stillness, soft charcoal warmth, gentle room ambiance",
+        "music_cue": "Soft, warm acoustic background music entering gently"
+      },
+      "is_end_card": false
+    },
+    {
+      "shot_id": 2,
+      "scene_name": "Hajja Mariam Roasting Coffee Calmly",
+      "start_time_s": 9.0,
+      "duration_s": 9.0,
+      "camera": {
+        "shot_type": "Medium Shot",
+        "movement": "Gentle static framing at eye level",
+        "lens": "50mm"
+      },
+      "visual_prompt": "Fictional elderly Ethiopian Muslim woman Hajja Mariam wearing a modest white headscarf (hijab) and a soft light shawl, seated calmly on a low wooden stool in a neat Addis Ababa living room, roasting green coffee beans over a small brazier in warm morning light, serene unhurried mood, photorealistic, natural lighting",
+      "negative_prompt": "rushed expression, extra fingers, deformed hands, distorted face, modern office background",
+      "audio": {
+        "speaker": "Narrator",
+        "voiceover_amharic": "ሐጅያ ማርያም ቡና ስትቆላ ፈጽሞ አትቸኩልም፤ እያንዳንዷ ፍሬ በእርጋታ እስክትበስል ትጠብቃለች።",
+        "voiceover_english": "Hajja Mariam never rushed while roasting; she waited calmly for every bean to turn.",
+        "foley": "Gentle roasting warmth and soft charcoal crackle",
+        "music_cue": "Steady warm acoustic melody continuing softly"
+      },
+      "is_end_card": false
+    },
+    {
+      "shot_id": 3,
+      "scene_name": "Hands Stirring Beans & Morning Smoke",
+      "start_time_s": 18.0,
+      "duration_s": 9.0,
+      "camera": {
+        "shot_type": "Close-Up",
+        "movement": "Subtle slow close-up drift",
+        "lens": "85mm"
+      },
+      "visual_prompt": "Close-up of gentle, experienced hands slowly stirring coffee beans in a small iron roasting pan as thin, warm smoke rises into soft morning light, rich natural textures, calm unhurried motion, photorealistic",
+      "negative_prompt": "distorted hands, extra fingers, heavy harsh smoke, modern stove, blurry",
+      "audio": {
+        "speaker": "Narrator",
+        "voiceover_amharic": "ነገሮች ሲከብዱን ወይም የምንጠብቀው ነገር ሲዘገይ፣ ሁልጊዜ አንድ ምሳሌ ታስታውሰን ነበር።",
+        "voiceover_english": "Whenever things felt heavy or what we hoped for took time, she always reminded us of one proverb.",
+        "foley": "Soft stirring of coffee beans in pan, light morning air",
+        "music_cue": "Gentle reflective underscore"
+      },
+      "is_end_card": false
+    },
+    {
+      "shot_id": 4,
+      "scene_name": "Warm Smile & The Egg Proverb",
+      "start_time_s": 27.0,
+      "duration_s": 9.0,
+      "camera": {
+        "shot_type": "Medium Close-Up",
+        "movement": "Gentle slow push-in",
+        "lens": "50mm"
+      },
+      "visual_prompt": "Hajja Mariam, a fictional elderly Ethiopian Muslim woman in a modest white headscarf (hijab) and soft light shawl, giving a calm, gentle smile with warm eyes, radiating patience and quiet reassurance in morning light, photorealistic portrait",
+      "negative_prompt": "harsh lighting, unnatural smile, distorted eyes, extra fingers, low resolution",
+      "audio": {
+        "speaker": "Narrator",
+        "voiceover_amharic": "«ቀስ በቀስ እንቁላል በእግሩ ይሄዳል» ትለን ነበር፤ በትዕግስት እና በበረካ ሁሉም ነገር በጊዜው ይሆናል።",
+        "voiceover_english": "'Step by step, an egg learns to walk,' she told us—with patience and blessing, everything comes in its time.",
+        "foley": "Soft calm room tone",
+        "music_cue": "Warm reassuring melodic phrase"
+      },
+      "is_end_card": false
+    },
+    {
+      "shot_id": 5,
+      "scene_name": "Wooden Rekebot, Sini Cups & Ground Coffee",
+      "start_time_s": 36.0,
+      "duration_s": 9.0,
+      "camera": {
+        "shot_type": "Insert Shot",
+        "movement": "Slow steady close framing",
+        "lens": "50mm"
+      },
+      "visual_prompt": "A traditional wooden rekebot holding small porcelain sini cups beside freshly ground dark coffee on a calm morning surface in a modest Addis Ababa living room, soft natural daylight, neat and peaceful arrangement, photorealistic",
+      "negative_prompt": "messy table, plastic cups, distorted tray, harsh shadows, low quality",
+      "audio": {
+        "speaker": "Narrator",
+        "voiceover_amharic": "የጠዋት ቡናችን ለመነጋገር፣ ለመተሳሰብ እና ልብን ለማረጋጋት የምንሰበሰብበት ጊዜ ነበር።",
+        "voiceover_english": "Our morning coffee was a time to talk, care for one another, and quiet the heart.",
+        "foley": "Soft set-down of small porcelain cups, calm morning atmosphere",
+        "music_cue": "Gentle warm acoustic accompaniment"
+      },
+      "is_end_card": false
+    },
+    {
+      "shot_id": 6,
+      "scene_name": "Pouring Coffee Into Cup",
+      "start_time_s": 45.0,
+      "duration_s": 9.0,
+      "camera": {
+        "shot_type": "Close-Up",
+        "movement": "Slow steady vertical framing",
+        "lens": "85mm"
+      },
+      "visual_prompt": "Rich dark coffee pouring steadily from a clay jebena into a small cup against warm morning light, calm steady stream, subtle steam, peaceful domestic scene, photorealistic",
+      "negative_prompt": "chaotic splashing, distorted pouring stream, broken cup, blurry",
+      "audio": {
+        "speaker": "Narrator",
+        "voiceover_amharic": "ዛሬ ሕይወት ሲጣደፍ፣ የእሷ እርጋታ ቆም ብለን እንድናስብ እና ተስፋ እንዳንቆርጥ ያደርገናል።",
+        "voiceover_english": "Today, when life feels hurried, her calm helps us pause and keep faith.",
+        "foley": "Steady gentle pour of coffee into a small cup",
+        "music_cue": "Soft hopeful harmonic swell"
+      },
+      "is_end_card": false
+    },
+    {
+      "shot_id": 7,
+      "scene_name": "Peaceful Room & Rising Steam",
+      "start_time_s": 54.0,
+      "duration_s": 10.0,
+      "camera": {
+        "shot_type": "Wide Shot",
+        "movement": "Slow peaceful pull-back / hold",
+        "lens": "24mm"
+      },
+      "visual_prompt": "Warm golden sunlight resting across the peaceful modest Addis Ababa living room with rug and ketema as gentle steam rises from the coffee cup, serene hopeful closing mood, photorealistic",
+      "negative_prompt": "dark gloomy distortion, clutter, flickering artifacts, low quality",
+      "audio": {
+        "speaker": "Narrator",
+        "voiceover_amharic": "ትዕግስት መዘግየት አይደለም፤ በእምነት እና በጥረት ለመልካም ነገር መዘጋጀት ነው።",
+        "voiceover_english": "Patience is not delay—it is preparing for good with faith and steady effort.",
+        "foley": "Quiet peaceful room tone and soft morning warmth",
+        "music_cue": "Warm gentle musical resolution"
+      },
+      "is_end_card": false
+    },
+    {
+      "shot_id": 8,
+      "scene_name": "AI Credits & Disclosure End Card",
+      "start_time_s": 64.0,
+      "duration_s": 8.0,
+      "camera": {
+        "shot_type": "End Card",
+        "movement": "Static clean card",
+        "lens": "Digital card"
+      },
+      "visual_prompt": "Clean dark warm card with centered crisp white text: 'Made with AI — Narration: Gemini TTS | Visuals: FLUX & FFmpeg | Music: ACE-Step 1.5'. Clean, legible layout with no clutter.",
+      "negative_prompt": "misspelled text, garbled letters, neon clutter, busy background",
+      "audio": {
+        "speaker": "Narrator / Outro",
+        "voiceover_amharic": "የጠዋት በረካ እና ምሳሌው። ይህ አጭር ፊልም በAI ቴክኖሎጂ የተሰራ ሲሆን ገጸ-ባህሪዋ ሐጅያ ማርያም ምናባዊ ናት።",
+        "voiceover_english": "Morning Barakah & The Proverb. Made with AI; character Hajja Mariam is fictional.",
+        "foley": "Soft fading ambient tone",
+        "music_cue": "Gentle fade to quiet close"
+      },
+      "is_end_card": true
+    }
+  ]
+}
