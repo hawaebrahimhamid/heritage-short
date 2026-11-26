@@ -1,44 +1,48 @@
 # Production Cost Analysis & Financial Model: "Morning Barakah"
 
-This document provides budgeting estimates, per-shot expenditure models, and tracking standards across multimodal generative pipelines.
+This document provides financial accounting, cost tracking, and unit economics across the multimodal generative pipeline for *"Morning Barakah & The Proverb"*.
 
 ---
 
-## 💰 Unit Economics & Model Cost Breakdown
+## 💰 Actual Production Expenditure: $0.00 USD
 
-| Component | Service / Model Category | Billing Metric | Estimated Unit Rate | Per-Run Consumption | Estimated Cost per Run |
+By strategically utilizing developer free tiers, optimized preview models, and local post-processing compute, the actual out-of-pocket cost for producing the complete 72-second master film (`outputs/final_16x9.mp4` and `outputs/final_9x16.mp4`) was **$0.00 USD**.
+
+### Actual Spend Ledger (Phase 1 to Phase 3)
+
+| Component | Provider / Tool | Model / Tier | Consumed Units | Rate | Actual Spend |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Video Synthesis** | Video Gen API (T2V / I2V) | Per second generated | ~$0.15 / sec | 72 seconds | $10.80 |
-| **Video Re-rolls (QA)** | Video Gen API (2x retries) | Per second generated | ~$0.15 / sec | ~40 seconds | $6.00 |
-| **Voice Synthesis** | Amharic Neural TTS / Clone | Per 1k characters | ~$0.015 / 1k chars | ~450 chars | $0.02 |
-| **Foley & Music Score** | Generative Audio API | Per audio track | ~$0.05 / generation | 4 tracks | $0.20 |
-| **LLM Orchestration** | Prompt Compiler & QA | Per 1M input/output tokens | ~$1.25 / 1M tokens | ~15k tokens | $0.02 |
-| **Storage & Egress** | Cloud Object Storage | Per GB / month | ~$0.02 / GB | ~1.5 GB | $0.03 |
-| **Compositing / FFmpeg** | CPU / GPU Compute | Compute instance time | ~$0.005 / min | ~6 mins | $0.03 |
-| **Total Production Run**| — | — | — | — | **~$17.10 USD** |
+| **Visual Still Generation** | Cloudflare Workers AI | `@cf/black-forest-labs/flux-1-schnell` (Free Tier) | 8 shot stills + portrait | 10k neurons/day free tier | **$0.00** |
+| **Amharic Voiceover (TTS)** | Google Gemini API | `gemini-2.5-flash-preview-tts` (Free/Preview Tier) | 8 narration clips (~74s audio) | Free rate limits | **$0.00** |
+| **Prompt Compilation & QA** | Google Gemini API | `gemini-2.5-flash` (Free Tier) | ~15k prompt/compiler tokens | Free tier allocation | **$0.00** |
+| **Ken Burns Pan/Zoom Motion** | Local FFmpeg Engine | Local CPU/GPU compute | 7 shot clips (24 fps, 1080p) | Local execution | **$0.00** |
+| **AI Disclosure End Card** | Local FFmpeg Engine | Static canvas (`drawtext` filter) | Shot 8 (8.0s) | Local execution | **$0.00** |
+| **Audio Concat & Radio Cut** | Python `wave` Standard Lib | Standard library 24kHz PCM | 74.27s master radio cut | Local execution | **$0.00** |
+| **Subtitle Burn-in (16:9 & 9:16)**| Local FFmpeg Engine | Subtitle filter + scale/pad | Master 1080p + 9:16 vertical | Local execution | **$0.00** |
+| **Storage & Telemetry Logging**| Local Filesystem & Git | SSD / `runs.jsonl` audit log | ~120 MB total artifacts | Local storage | **$0.00** |
+| **Total Production Spend** | — | — | — | — | **$0.00 USD** |
 
 ---
 
-## 📊 Per-Shot Budget Allocation (72s Master)
+## 📊 Estimated Commercial Value vs. Zero-Cost Reality
 
-| Shot ID | Scene Description | Target Duration | Expected Re-rolls | Baseline Video Cost | Contingency / Re-roll | Subtotal |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Shot 1** | Sunrise Highland Courtyard | 9.0s | 1.0x | $1.35 | $0.45 | $1.80 |
-| **Shot 2** | Hajja Mariam Lighting Stove | 9.0s | 1.8x | $1.35 | $1.08 | $2.43 |
-| **Shot 3** | Roasting Beans Macro | 9.0s | 1.2x | $1.35 | $0.54 | $1.89 |
-| **Shot 4** | Wafting Aromatic Smoke | 9.0s | 2.0x | $1.35 | $1.35 | $2.70 |
-| **Shot 5** | Clay Jebena Infusion | 9.0s | 1.0x | $1.35 | $0.45 | $1.80 |
-| **Shot 6** | High Arc Jebena Pour into Sini | 9.0s | 2.5x | $1.35 | $1.68 | $3.03 |
-| **Shot 7** | Hajja Mariam Delivering Proverb | 10.0s | 2.0x | $1.50 | $1.50 | $3.00 |
-| **Shot 8** | AI Disclosure End Card | 8.0s | 0.0x (Code-rendered) | $0.00 | $0.00 | $0.00 |
-| **Audio** | Amharic VO + Ambience + Mix | 72.0s | 1.5x | $0.25 | $0.20 | $0.45 |
-| **Total** | Full Master | **72.0s** | — | **$8.50** | **$8.60** | **$17.10** |
+Had this project been rendered entirely through commercial paid-tier APIs without local compute optimization, estimated commercial pricing would have been:
+
+| Production Category | Hypothetical Commercial Service | Billing Rate | Estimated Commercial Cost | Actual Project Cost |
+| :--- | :--- | :--- | :--- | :--- |
+| Video Synthesis (72s) | Commercial Video Gen API (Runway/Luma) | ~$0.15 / sec | $10.80 | **$0.00** (Local Ken Burns on FLUX stills) |
+| Video Re-rolls & QA | Commercial Video Gen API | ~$0.15 / sec | $6.00 | **$0.00** (Fixed seed 42 single-pass) |
+| Voice Synthesis (Amharic) | Commercial Voice Clone API | ~$0.015 / 1k chars | $0.02 | **$0.00** (Gemini Preview TTS Free Tier) |
+| LLM Orchestration & Prompt QA | Commercial LLM API | ~$1.25 / 1M tokens | $0.02 | **$0.00** (Gemini 2.5 Flash Free Tier) |
+| Video Compositing & Subtitles | Cloud Render Farm (AWS/Modal) | ~$0.05 / min | $0.26 | **$0.00** (Local FFmpeg assembly) |
+| **Total Equivalent Value** | — | — | **~$17.10 USD** | **$0.00 USD (100% Free Tiers / Local)** |
 
 ---
 
-## ⚡ Cost Optimization Strategies
+## ⚡ Cost Optimization Strategies Implemented
 
-1. **Static Pre-Rendering for Shot 8**: The final AI disclosure end card does not require generative video credits. Render programmatically via FFmpeg drawing filters or SVG-to-video for $0.00 cost.
-2. **Low-Resolution Fast-Pass Previews**: Generate 480p preview passes at 1/4th token cost before rendering high-bitrate 1080p masters.
-3. **Reference Image Freezing**: By using high-fidelity static image anchors for Hajja Mariam in I2V mode, re-roll frequency drops from an average of 4.2 attempts to 1.8 attempts per shot.
-4. **Local FFmpeg Post-Processing**: Audio mixing, color LUT application, and subtitle burning run on local CPU/GPU hardware at zero API charge.
+1. **Local FFmpeg Ken Burns Assembly**: Instead of paying cloud video credits ($0.10–$0.20 per second), still images were generated once via Cloudflare FLUX Free Tier and animated locally with smooth dynamic pan/zoom (`zoompan`) filters at zero cost.
+2. **Fixed Seed Caching (`seed: 42`)**: Single-shot caching ensures that only missing or modified shots are re-generated. Re-running the pipeline checks `outputs/` first, incurring 0 redundant API calls.
+3. **Pure Python Audio Assembly**: Concat and timeline synchronization of `outputs/radio_cut_audio.wav` uses Python's built-in `wave` module, requiring zero paid external audio APIs.
+4. **Programmatic AI Disclosure End Card**: Shot 8 is rendered directly in code via FFmpeg drawtext for $0.00, rather than spending generative video tokens.
+5. **Dual Aspect Ratio Local Export**: Both horizontal 16:9 (`final_16x9.mp4`) and mobile vertical 9:16 (`final_9x16.mp4`) masters are generated locally in a single FFmpeg pass at $0.00.

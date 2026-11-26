@@ -73,3 +73,20 @@
 - Visual style: Matte black background with ivory typographic hierarchy.
 - Clear disclosure statement: "This short heritage vignette was crafted using generative AI models in homage to Ethiopian cultural storytelling. Character Hajja Mariam is fictional."
 - Attribution and provenance hashes linking to run logs.
+
+---
+
+## 7. Viewer Feedback & Iterations
+
+During peer review of *"Morning Barakah & The Proverb"* ("የጠዋት በረካ እና ምሳሌው"), community reviewers provided qualitative assessments on the narrative, linguistic, and ethical execution:
+
+### 1. Aisha Hussein
+- **Feedback**: Expressed warm, positive appreciation of the short film, commending the serene morning mood, authentic cultural atmosphere, and respectful portrayal of the Ethiopian coffee ritual.
+
+### 2. Haylemichael Tsega Gebrekidan
+- **Observation 1 (Narrative & Thematic Resonance)**: Appreciated the natural conceptual connection between the slow, patient coffee roasting ceremony and the Amharic proverb (*"ቀስ በቀስ እንቁላል በእግሩ ይሄዳል"* / *"Step by step, even an egg learns to walk"*).
+- **Observation 2 (Subtitles & Voice Tone)**: Noted that the burned-in English subtitles are clear, crisp, and easy to read. Observed that while the synthesized Amharic narration is intelligible, the TTS tone and prosody feel slightly synthetic and not fully natural to native Amharic speakers.
+- **Observation 3 (End Card Delivery)**: Suggested that the final AI disclosure end card is best presented as on-screen text rather than spoken audio, allowing viewers to quietly absorb the transparency statement without breaking the contemplative mood of the proverb.
+
+### Phase 3 Decision & Finalization
+Both documented feedback items have been incorporated into project review logs. With these valuable peer assessments recorded, the project proceeds directly to **Phase 3 finalization and submission**, retaining burned-in subtitles for universal accessibility while logging voice cadence nuances for future human voiceover iterations.

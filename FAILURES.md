@@ -75,3 +75,71 @@ This document catalogs observed failure modes during generative synthesis, detai
 ### 8. Kaggle `ace-step` Python 3.13 Version Incompatibility (2026-11-26)
 - **Symptom:** Running `pip install -e .` inside `ACE-Step-1.5` on Kaggle failed with `ERROR: Package 'ace-step' requires a different Python: 3.13.16 not in '<3.13,>=3.11'`.
 - **Cause / Decision:** The Kaggle runtime uses Python `3.13.16`, which does not satisfy `<3.13,>=3.11`. Decided not to spend more time troubleshooting Python versions on Kaggle and moved forward with local FFmpeg for motion (Ken Burns zoom/pan), audio mixing/ducking, subtitle burning, and video export to protect the Nov 26, 2026 23:59 EAT deadline.
+
+### 9. Amharic TTS Native Prosody & Tone Limitation (Peer Review Finding)
+- **Date**: 2026-11-26
+- **Severity**: Medium (Aesthetic & cultural nuance)
+- **Symptom**: During peer review, reviewer Haylemichael Tsega Gebrekidan noted that while the Amharic narration is fully intelligible and grammatically accurate, the neural TTS voice tone does not sound completely natural or colloquial to native speakers, lacking the lived vocal timbre and elder warmth of a real grandmother.
+- **Root Cause**: Commercial multilingual TTS engines (Gemini Preview TTS / neural models) generalize across broad phonetic datasets and lack colloquial Ethiopian elder prosody and micro-intonations without extensive fine-tuning.
+- **Mitigation & Phase 3 Decision**:
+  - Burned-in clear, high-contrast English subtitles (`outputs/subtitles.srt`) to ensure complete comprehension across international and non-native audiences.
+  - Documented as an identified aesthetic limitation for Phase 3 submission; future iterations will record authenticated native elder voice actors.
+
+### 10. FFmpeg `drawtext` Filter Colon & Path Escaping on Windows
+- **Severity**: Medium (CLI build failure)
+- **Symptom**: Generating the Shot 8 AI disclosure card failed with filter parse errors: `[Parsed_drawtext_0 @ ...] Option not found: '/Windows/Fonts/arial.ttf'`.
+- **Root Cause**: FFmpeg treats colons (`:`) as delimiter flags between filter arguments. On Windows, absolute file paths containing drive letters (e.g., `C:\Windows\...`) break the argument parser.
+- **Mitigation**:
+  - Double-escape colons in paths (`C\\:/Windows/Fonts/arial.ttf` or forward-slash normalized paths).
+  - Externalized multi-line text into a dedicated text file (`outputs/end_card_text.txt`) passed via `textfile='outputs/end_card_text.txt'` rather than inline CLI strings, completely avoiding shell quote/newline conflicts.
+
+### 11. `video_list.txt` Lexicographical Sorting & Demuxer Ordering
+- **Severity**: High (Narrative sequence corruption)
+- **Symptom**: Automated directory globbing could place `clip_08_end_card.mp4` or unordered clips out of sequence during the FFmpeg concat pass.
+- **Root Cause**: Default filesystem sort orders or unordered directory iterators can concatenate clips non-chronologically.
+- **Mitigation**:
+  - Enforced an explicit, strictly ordered manifest in `outputs/video_list.txt` with zero-padded shot indices (`clip_01.mp4` through `clip_08_end_card.mp4`).
+  - Added verification in build workflows to assert all 8 shots appear in exact order (1 through 8) before executing `ffmpeg -f concat -safe 0 -i outputs/video_list.txt`.
+
+### 12. Local FFmpeg `zoompan` Filter Buffer & Subtitle Burn-in Assembly
+- **Severity**: Medium (Frame drop & filter graph syntax error)
+- **Symptom**: Applying Ken Burns pan-and-zoom directly to raw high-resolution still images (`shot_01.png` - `shot_07.png`) caused stuttering, aspect ratio distortion, or memory spikes, while subtitle filter paths failed on Windows backslashes.
+- **Root Cause**: FFmpeg `zoompan` operates on internal pixel buffers and requires explicit frame rates (`fps=24`) and uniform output resolutions (`s=1920x1080`). Additionally, the `subtitles` filter requires forward slashes or escaped backslashes.
+- **Mitigation**:
+  - Standardized the zoompan filter chain: `zoompan=z='min(zoom+0.0015,1.25)':d=216:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1920x1080,fps=24`.
+  - Implemented single-shot caching: only missing clips are rendered; existing clips are preserved.
+  - Subtitles burned reliably using forward slashes (`subtitles=outputs/subtitles.srt`) for the 16:9 master, and cropped/padded via `scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2` for the 9:16 vertical version.
+
+### 9. Amharic TTS Native Prosody & Tone Limitation (Peer Review Finding)
+- **Date**: 2026-11-26
+- **Severity**: Medium (Aesthetic & cultural nuance)
+- **Symptom**: During peer review, reviewer Haylemichael Tsega Gebrekidan noted that while the Amharic narration is fully intelligible and grammatically accurate, the neural TTS voice tone does not sound completely natural or colloquial to native speakers, lacking the lived vocal timbre and elder warmth of a real grandmother.
+- **Root Cause**: Commercial multilingual TTS engines (Gemini Preview TTS / neural models) generalize across broad phonetic datasets and lack colloquial Ethiopian elder prosody and micro-intonations without extensive fine-tuning.
+- **Mitigation & Phase 3 Decision**:
+  - Burned-in clear, high-contrast English subtitles (`outputs/subtitles.srt`) to ensure complete comprehension across international and non-native audiences.
+  - Documented as an identified aesthetic limitation for Phase 3 submission; future iterations will record authenticated native elder voice actors.
+
+### 10. FFmpeg `drawtext` Filter Colon & Path Escaping on Windows
+- **Severity**: Medium (CLI build failure)
+- **Symptom**: Generating the Shot 8 AI disclosure card failed with filter parse errors: `[Parsed_drawtext_0 @ ...] Option not found: '/Windows/Fonts/arial.ttf'`.
+- **Root Cause**: FFmpeg treats colons (`:`) as delimiter flags between filter arguments. On Windows, absolute file paths containing drive letters (e.g., `C:\Windows\...`) break the argument parser.
+- **Mitigation**:
+  - Double-escape colons in paths (`C\\:/Windows/Fonts/arial.ttf` or forward-slash normalized paths).
+  - Externalized multi-line text into a dedicated text file (`outputs/end_card_text.txt`) passed via `textfile='outputs/end_card_text.txt'` rather than inline CLI strings, completely avoiding shell quote/newline conflicts.
+
+### 11. `video_list.txt` Lexicographical Sorting & Demuxer Ordering
+- **Severity**: High (Narrative sequence corruption)
+- **Symptom**: Automated directory globbing could place `clip_08_end_card.mp4` or unordered clips out of sequence during the FFmpeg concat pass.
+- **Root Cause**: Default filesystem sort orders or unordered directory iterators can concatenate clips non-chronologically.
+- **Mitigation**:
+  - Enforced an explicit, strictly ordered manifest in `outputs/video_list.txt` with zero-padded shot indices (`clip_01.mp4` through `clip_08_end_card.mp4`).
+  - Added verification in build workflows to assert all 8 shots appear in exact order (1 through 8) before executing `ffmpeg -f concat -safe 0 -i outputs/video_list.txt`.
+
+### 12. Local FFmpeg `zoompan` Filter Buffer & Subtitle Burn-in Assembly
+- **Severity**: Medium (Frame drop & filter graph syntax error)
+- **Symptom**: Applying Ken Burns pan-and-zoom directly to raw high-resolution still images (`shot_01.png` - `shot_07.png`) caused stuttering, aspect ratio distortion, or memory spikes, while subtitle filter paths failed on Windows backslashes.
+- **Root Cause**: FFmpeg `zoompan` operates on internal pixel buffers and requires explicit frame rates (`fps=24`) and uniform output resolutions (`s=1920x1080`). Additionally, the `subtitles` filter requires forward slashes or escaped backslashes.
+- **Mitigation**:
+  - Standardized the zoompan filter chain: `zoompan=z='min(zoom+0.0015,1.25)':d=216:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1920x1080,fps=24`.
+  - Implemented single-shot caching: only missing clips are rendered; existing clips are preserved.
+  - Subtitles burned reliably using forward slashes (`subtitles=outputs/subtitles.srt`) for the 16:9 master, and cropped/padded via `scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2` for the 9:16 vertical version.

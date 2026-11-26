@@ -13,19 +13,20 @@ The Ethiopian coffee ceremony (*buna*) and traditional oral wisdom (*tret ena me
 
 ## 2. Character Ethics: Hajja Mariam (ሐጃ ማርያም)
 
-- **Fictional Status**: Hajja Mariam is an entirely fictional composite character created solely for this artistic demonstration.
-- **Non-Impersonation Guarantee**:
-  - The visual generation seeds and voice synthesis models do **NOT** utilize or mimic the likeness, private image, or voice recording of any real living or deceased individual.
-  - No private biometric data or uncredited voice actors were ingested without express consent.
+- **100% Fictional Status**: The character of **Hajja Mariam** (depicted as a 68-year-old Ethiopian cultural matriarch and storyteller, generated with fixed seed `42`) is **100% fictional**. She is an artificial composite persona designed specifically for this cultural tribute vignette.
+- **Zero Real Human Identities or Likenesses**:
+  - **Zero real human faces or identities** were used, ingested, copied, or mimicked in the visual generation pipeline.
+  - **Zero real human voices or private biometric voiceprints** were sampled or cloned. All spoken audio was generated programmatically via neural text-to-speech.
+  - Strictly adheres to a complete **non-impersonation guarantee**, ensuring no living or historical individual's identity or likeness is appropriated.
 
 ---
 
 ## 3. Mandatory AI Disclosure & Provenance Standards
 
-To combat synthetic disinformation and maintain transparent artistic boundaries, this project adheres to strict disclosure standards:
+To combat synthetic disinformation and maintain transparent artistic boundaries, this project adheres to strict disclosure standards across all distribution surfaces:
 
-### 3.1 Shot 8: Dedicated Disclosure End Card
-The final 8 seconds of the film are dedicated to a full-screen, unskippable disclosure card containing:
+### 3.1 Shot 8: Dedicated Disclosure End Card (64–72s)
+The final 8 seconds (from timestamp 01:04 to 01:12 / seconds 64 to 72) of the film are dedicated to a full-screen, unskippable visual disclosure end card containing:
 ```text
 Title: Morning Barakah & The Proverb (የጧት በረከት እና ምሳሌው)
 Notice: This heritage vignette was produced using synthetic media and generative AI tools.
@@ -34,9 +35,11 @@ Language: Amharic narration with English subtitles.
 Provenance & Audit Hash: Refer to runs.jsonl for complete generation metadata.
 ```
 
-### 3.2 Content Credentials & Metadata
-- Rendered MP4 files embed C2PA-compliant or standard XMP provenance metadata tags identifying the media as synthetically generated (`is_synthetic: true`).
-- Distribution channels must include `#MadeWithAI` and explicit credit notes detailing the assistive role of machine learning tools.
+### 3.2 Public Posts & External Distribution Disclosures
+In addition to the in-film end card, all external releases, public video posts, social media distributions, and portfolio showcases must explicitly display:
+- **Mandatory Disclosure Tags**: `#MadeWithAI` and `#AIEthics`.
+- **Accompanying Description**: Explicit notice stating: *"This video is an AI-assisted heritage tribute. Character Hajja Mariam is 100% fictional (no real human likeness or voice used). Produced with Cloudflare FLUX, Gemini TTS, and local FFmpeg."*
+- **Embedded Metadata**: Rendered MP4 files embed standard synthetic provenance tags (`is_synthetic: true`) with audit hashes cross-referenced in [runs.jsonl](file:///d:/heritage-short/runs.jsonl).
 
 ---
 
